@@ -27,5 +27,30 @@ module.exports = appInfo => {
     },
   };
 
+  // redis
+  const __redisConnectionDefault = {
+    host: '127.0.0.1',
+    port: 6379,
+    password: '',
+    db: 0,
+  };
+  const __redisConnectionDefaultCache = Object.assign({}, __redisConnectionDefault, {
+    keyPrefix: `cache_${appInfo.name}:`,
+  });
+
+  config.redisConnection = {
+    default: __redisConnectionDefault,
+    cache: __redisConnectionDefaultCache,
+  };
+
+  config.redis = {
+    clients: {
+      limiter: config.redisConnection.default,
+      queue: config.redisConnection.default,
+      broadcast: config.redisConnection.default,
+      cache: config.redisConnection.cache,
+    },
+  };
+
   return config;
 };

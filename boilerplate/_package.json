@@ -8,12 +8,12 @@
   "scripts": {
     "dev:front": "egg-born-bin front-dev",
     "build:front": "egg-born-bin front-build",
-    "dev:backend": "egg-born-bin backend-dev --workers=2",
+    "dev:backend": "egg-born-bin backend-dev",
     "debug:backend": "egg-born-bin backend-debug",
     "lint": "eslint src",
-    "test:backend": "egg-born-bin backend-test --timeout=3600000",
+    "test:backend": "egg-born-bin backend-test",
     "cov:backend": "egg-born-bin backend-cov",
-    "start:backend": "egg-born-scripts backend-start --daemon",
+    "start:backend": "egg-born-scripts backend-start",
     "stop:backend": "egg-born-scripts backend-stop"
   },
   "author": "{{author}}",
@@ -24,6 +24,6 @@
     "eslint-plugin-vuefix": "^0.2.1"
   },
   "dependencies": {
-    "wantcms": "^1.0.1"
+    "wantcms": "^1.0.5"
   }
 }
