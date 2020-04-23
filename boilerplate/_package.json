@@ -24,6 +24,6 @@
     "eslint-plugin-vuefix": "^0.2.1"
   },
   "dependencies": {
-    "wantcms": "^1.0.5"
+    "wantcms": "^1.0.6"
   }
 }
