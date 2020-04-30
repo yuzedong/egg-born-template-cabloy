@@ -6,6 +6,7 @@
     "Cabloy Project"
   ],
   "scripts": {
+    "dev:frontend": "egg-born-bin frontend-dev",
     "dev:front": "egg-born-bin front-dev",
     "build:front": "egg-born-bin front-build",
     "dev:backend": "egg-born-bin backend-dev",
@@ -24,6 +25,5 @@
     "eslint-plugin-vuefix": "^0.2.1"
   },
   "dependencies": {
-    "wantcms": "^1.0.6"
+    "wantcms": "^1.0.8"
   }
-}
